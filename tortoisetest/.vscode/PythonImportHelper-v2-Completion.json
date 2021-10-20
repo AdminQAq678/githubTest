@@ -1,0 +1,103 @@
+[
+    {
+        "label": "Model",
+        "importPath": "tortoise.models",
+        "description": "tortoise.models",
+        "isExtraImport": true,
+        "detail": "tortoise.models",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "tortoise",
+        "description": "tortoise",
+        "isExtraImport": true,
+        "detail": "tortoise",
+        "documentation": {}
+    },
+    {
+        "label": "Tortoise",
+        "importPath": "tortoise",
+        "description": "tortoise",
+        "isExtraImport": true,
+        "detail": "tortoise",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "starlette.requests",
+        "description": "starlette.requests",
+        "isExtraImport": true,
+        "detail": "starlette.requests",
+        "documentation": {}
+    },
+    {
+        "label": "uvicorn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uvicorn",
+        "description": "uvicorn",
+        "detail": "uvicorn",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "starlette.responses",
+        "description": "starlette.responses",
+        "isExtraImport": true,
+        "detail": "starlette.responses",
+        "documentation": {}
+    },
+    {
+        "label": "Account",
+        "importPath": "models.UserModel",
+        "description": "models.UserModel",
+        "isExtraImport": true,
+        "detail": "models.UserModel",
+        "documentation": {}
+    },
+    {
+        "label": "aioredis",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "aioredis",
+        "description": "aioredis",
+        "detail": "aioredis",
+        "documentation": {}
+    },
+    {
+        "label": "Account",
+        "kind": 6,
+        "importPath": "models.UserModel",
+        "description": "models.UserModel",
+        "peekOfCode": "class Account(Model):\n    id = fields.IntField(pk=True)\n    name = fields.TextField()\n    def __str__(self):\n        return self.name",
+        "detail": "models.UserModel",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI()\n@app.get('/index')\nasync def index(response: Response):\n    t = time.time()\n    account = Account(name=f'asdsd{t}')\n    await account.save()\n    response.set_cookie('username', 'zhansan')\n    return {'msg': 'hello world'}\n@app.get('/query')\nasync def accout_list_get():",
+        "detail": "main",
+        "documentation": {}
+    }
+]
